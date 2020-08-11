@@ -1,15 +1,15 @@
-const path = require("path");
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+// const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  mode: "development",
+  mode: 'development',
   entry:  {
     app: path.join(__dirname, 'www', 'main.js')
   },
   output: {
-    path: path.join(__dirname, "dist"),
-    filename: "main.js"
+    path: path.join(__dirname, 'dist'),
+    filename: 'main.js'
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx']
@@ -19,7 +19,7 @@ module.exports = {
       {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: ['babel-loader']
       },
       {
         test: /\.s([ca])ss$/,
@@ -32,6 +32,7 @@ module.exports = {
       new HtmlWebpackPlugin({
         template: path.join(__dirname, 'www', 'index.html')
       }),
+
       // new CopyPlugin({
       //   patterns: [
       //     {
