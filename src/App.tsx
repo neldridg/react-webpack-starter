@@ -3,7 +3,7 @@ import './styles/App.scss';
 import SampleComponent from "./components/SampleComponent";
 
 interface AppProps {
-  // Props go here
+  AppName: string;
 }
 
 export default class App extends Component<AppProps> {
@@ -11,7 +11,7 @@ export default class App extends Component<AppProps> {
     super(props);
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <div>
         <h1>Hello world!</h1>

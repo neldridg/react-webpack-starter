@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styles/SampleComponent.scss'
 
 interface SampleComponentProps {
-
+  Sample: string;
 }
 
 export default class SampleComponent extends Component<SampleComponentProps> {
@@ -10,7 +10,7 @@ export default class SampleComponent extends Component<SampleComponentProps> {
     super(props);
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <div>Sample Component</div>
     )
