@@ -15,7 +15,7 @@ export default class App extends Component<AppProps> {
     return (
       <div>
         <h1>Hello world!</h1>
-        <SampleComponent />
+        <SampleComponent Sample={'Sample'}/>
       </div>
     )
   }
